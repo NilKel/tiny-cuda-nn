@@ -155,7 +155,7 @@ class Module(torch.nn.Module):
 		super(Module, self).__init__()
 
 		self.native_tcnn_module = self._native_tcnn_module()
-		self.dtype = _torch_precision(self.native_tcnn_module.param_precision())
+		self.dtype = torch.float
 
 		self.seed = seed
 		initial_params = self.native_tcnn_module.initial_params(seed)
