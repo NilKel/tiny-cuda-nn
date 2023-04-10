@@ -177,7 +177,7 @@ class Module(torch.nn.Module):
 		output = _module_function.apply(
 			self.native_tcnn_module,
 			x_padded.to(torch.float).contiguous(),
-			self.params.to(_torch_precision(self.native_tcnn_module.param_precision())).contiguous(),
+			self.params.to(torch.float).contiguous(),
 			self.loss_scale
 		)
 		return output[:batch_size, :self.n_output_dims]
