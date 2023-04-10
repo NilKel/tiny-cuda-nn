@@ -81,7 +81,6 @@ public:
 
 		// Types
 		CHECK_THROW(input.scalar_type() == torch::kFloat32);
-		CHECK_THROW(params.scalar_type() == c10_param_precision());
 
 		// Sizes
 		CHECK_THROW(input.size(1) == n_input_dims());
