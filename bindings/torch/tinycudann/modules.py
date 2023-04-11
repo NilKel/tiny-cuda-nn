@@ -308,7 +308,7 @@ class Encoding(Module):
 			if dtype == torch.float32:
 				self.precision = _C.Precision.Fp32
 			elif dtype == torch.float16:
-				self.precision = _C.Precision.Fp16
+				self.precision = _C.Precision.Fp32
 			else:
 				raise ValueError(f"Encoding only supports fp32 or fp16 precision, but got {dtype}")
 
