@@ -58,7 +58,7 @@ if _C is None:
 	raise EnvironmentError(f"Could not find compatible tinycudann extension for compute capability {system_compute_capability}.")
 
 def _torch_precision(tcnn_precision):
-	if tcnn_precision == _C.Precision.Fp16:
+	if tcnn_precision == _C.Precision.Fp32:
 		return torch.half
 	elif tcnn_precision == _C.Precision.Fp32:
 		return torch.float
